@@ -12,3 +12,9 @@ An E-commerce business wants to predict which customers are likely to churn base
 
 Target column - Churn (1 = churned, 0 = retained)
 
+
+
+
+
+### Points to note
+__This project aims to make and improve model performance over time, iterating the data process to make sure the model becomes a bit better after every iteration__
