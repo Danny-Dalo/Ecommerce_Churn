@@ -19,3 +19,4 @@ Target column - Churn (1 = churned, 0 = retained)
 ### Points to note
 + __This project aims to make and improve model performance over time, iterating the data process to make sure the model becomes a bit better after every iteration.__
 + __Any missed step or detail in any of the notebooks can be brought up and improved, the project will see the continous improvement of the model and pipeline.__
++ __Some assumptions were made for the sake of this project, in a business setting, it would be more reasonable to ask for clarity or to get additional data from its source__
