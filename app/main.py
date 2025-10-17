@@ -1,14 +1,17 @@
 
 from fastapi import FastAPI
 import joblib
+import os
 import pandas as pd
-from typing import Union
 
 app = FastAPI(title="Customer Churn Prediction API")
 
-model = joblib.load("../artifacts/logistic_regression_model.pkl")
 
-pipeline = joblib.load("../artifacts/logistic_regression_pipeline.pkl")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+model = joblib.load(os.path.join(BASE_DIR, "artifacts", "logistic_regression_model.pkl"))
+pipeline = joblib.load(os.path.join(BASE_DIR, "artifacts", "logistic_regression_pipeline.pkl"))
+
+
 
 @app.get("/")
 def home():
