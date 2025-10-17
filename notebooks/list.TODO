@@ -1,3 +1,4 @@
 - Properly set titles for all plots in exploratory_analysis notebook
 - put the code block to retrieve names from encoded features and concatenate into a function that can be called (`feature_engineering.ipynb`) 
 - Cleaner folder structure for future models/pipelines
+- Handle warning when model  makes a predictions--> UserWarning: X does not have valid feature names, but LogisticRegression was fitted with feature name
