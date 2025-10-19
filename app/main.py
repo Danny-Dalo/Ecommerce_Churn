@@ -4,6 +4,7 @@ import joblib
 import os
 import pandas as pd
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
 
 app = FastAPI(title="Customer Churn Prediction API")
 
@@ -22,9 +23,19 @@ pipeline = joblib.load(os.path.join(BASE_DIR, "artifacts", "logistic_regression_
 
 
 
-@app.get("/")
-def home():
-    return {"message" : "Customer Churn Prediction API is running..."}
+# @app.get("/")
+# def home():
+
+#     html_content = """
+#     <html>
+#       <head><title>Customer Churn Prediction API</title></head>
+#       <body>
+#         <h1>Customer Churn Prediction API is running...</h1>
+#         <p> head to
+#       </body>
+#     </html>
+#     """
+#     return HTMLResponse(content=html_content)
 
 
 @app.post("/predict")
