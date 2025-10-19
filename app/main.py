@@ -3,8 +3,17 @@ from fastapi import FastAPI
 import joblib
 import os
 import pandas as pd
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Customer Churn Prediction API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with specific origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
